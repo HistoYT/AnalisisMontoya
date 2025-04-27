@@ -1,0 +1,73 @@
+.indicadores-financieros {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.indicadores-financieros h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a; /* Azul oscuro, acorde al ejemplo */
+}
+
+.indicadores-financieros table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.indicadores-financieros table th,
+.indicadores-financieros table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.indicadores-financieros table th {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.indicadores-financieros table td {
+  color: #555;
+}
+
+.indicadores-financieros table tr:hover {
+  background-color: #f0f0f0;
+}
+
+#calcular-indicadores-btn {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Espacio encima del botón */
+  margin: 10px;
+}
+
+#calcular-indicadores-btn:hover {
+  background-color: #45a049; /* Verde más oscuro */
+}
+
+#calcular-indicadores-btn:disabled {
+  background-color: #ccc; /* Gris */
+  color: #666;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+  .indicadores-financieros table {
+      display: block;
+      overflow-x: auto;
+  }
+  .indicadores-financieros table th,
+  .indicadores-financieros table td {
+      white-space: nowrap;
+  }
+}

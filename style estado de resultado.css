@@ -1,0 +1,157 @@
+/* Contenedor principal */
+.estado-resultados {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Títulos */
+.estado-resultados h2, .estado-resultados h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.estado-resultados h2 {
+    font-size: 2em;
+}
+
+.estado-resultados h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+/* Tablas */
+.estado-resultados table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.estado-resultados th, .estado-resultados td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.estado-resultados th {
+    background-color: #f7f9fc;
+    font-weight: bold;
+    color: #34495e;
+    text-align: center;
+}
+
+.estado-resultados td {
+    text-align: right;
+    color: #555;
+}
+
+.estado-resultados tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.estado-resultados tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Totales */
+.estado-resultados h3 + table tr:last-child td {
+    font-weight: bold;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Animación para valores negativos */
+/* Animación para valores negativos */
+.estado-resultados .negativo {
+    color: #e74c3c;
+    font-weight: bold;
+    background-color: rgba(231, 76, 60, 0.2);
+    animation: parpadeo-rojo-exagerado 1s infinite ease-in-out;
+    text-shadow: 0 0 15px rgba(231, 76, 60, 0.8), 0 0 30px rgba(231, 76, 60, 0.6);
+}
+
+@keyframes parpadeo-rojo-exagerado {
+    0%, 100% {
+        color: #e74c3c;
+        background-color: rgba(231, 76, 60, 0.2);
+        text-shadow: 0 0 15px rgba(231, 76, 60, 0.8), 0 0 30px rgba(231, 76, 60, 0.6);
+        transform: scale(1);
+    }
+    50% {
+        color: #c0392b;
+        background-color: rgba(192, 57, 43, 0.3);
+        text-shadow: 0 0 25px rgba(192, 57, 43, 1), 0 0 40px rgba(192, 57, 43, 0.8);
+        transform: scale(1.1);
+    }
+}
+
+/* Botones */
+.estado-resultados button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.estado-resultados button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .estado-resultados {
+        padding: 20px;
+    }
+
+    .estado-resultados h2 {
+        font-size: 1.5em;
+    }
+
+    .estado-resultados h3 {
+        font-size: 1.2em;
+    }
+
+    .estado-resultados table {
+        font-size: 0.9em;
+    }
+
+    .estado-resultados th, .estado-resultados td {
+        padding: 8px 10px;
+    }
+
+    /* Ajustar los inputs en pantallas pequeñas */
+    .estado-resultados input[type="text"] {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 10px; /* Espaciado interno */
+        font-size: 1em; /* Tamaño de fuente ajustado */
+        box-sizing: border-box; /* Incluye el padding en el ancho total */
+        margin-bottom: 10px; /* Espaciado entre inputs */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Alinear los inputs y etiquetas verticalmente */
+    .estado-resultados td {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .estado-resultados th {
+        text-align: left;
+    }
+}

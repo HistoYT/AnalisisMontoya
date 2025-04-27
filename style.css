@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.balance-general, .estado-resultados, .indicadores-financieros, .analisis-financiero {
+    width: 90%;
+    max-width: 960px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.total {
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+
+.agregar-cuenta-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.agregar-cuenta-form label {
+    flex: 1 1 100%;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.agregar-cuenta-form input[type="text"],
+.agregar-cuenta-form input[type="number"] {
+    flex: 1 1 calc(50% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.agregar-cuenta-form button {
+    flex: 1 1 100%;
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.agregar-cuenta-form button:hover {
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.agregar-cuenta-form button:active {
+    transform: scale(0.98);
+}
+
+/* Animación al agregar una cuenta */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+tr.added-row {
+    animation: fadeIn 0.5s ease-in-out;
+}
+/* Estilo para el botón "Eliminar" */
+.agregar-cuenta-form button,
+table button {
+    background-color: #4660f8; /* Rojo para el botón "Eliminar" */
+    color: white;
+    border: 2px solid #0b0bff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+table button:hover {
+    background-color: white;
+    color: #0b0bff;
+    border: 2px solid #0b0bff;
+}
+
+table button:active {
+    transform: scale(0.98);
+}
+
+/* Animación al eliminar una cuenta */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+tr.removed-row {
+    animation: fadeOut 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+/* Responsive Design */
+
+/* Estilo para los títulos de las secciones principales */
+section.activo h3,
+section.pasivo h3,
+section.patrimonio h3 {
+    font-size: 1.8em;
+    color: #000000;
+    background-color: #007bff66; /* Azul para diferenciar */
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los subtítulos dentro de las secciones */
+section.activo h4,
+section.pasivo h4,
+section.patrimonio h4 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+    border-left: 4px solid #007bff58;
+    padding-left: 10px;
+}
+
+/* Estilo para el resumen */
+.resumen h3 {
+    font-size: 1.6em;
+    color: #ffffff;
+    background-color: #28a745; /* Verde para el resumen */
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .balance-general, .estado-resultados, .indicadores-financieros, .analisis-financiero {
+        width: 100%;
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .agregar-cuenta-form {
+        flex-direction: column;
+    }
+
+    .agregar-cuenta-form input[type="text"],
+    .agregar-cuenta-form input[type="number"] {
+        flex: 1 1 100%;
+    }
+
+    .agregar-cuenta-form button {
+        flex: 1 1 100%;
+    }
+}
